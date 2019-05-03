@@ -1,4 +1,23 @@
 # ASP.NET
+- task: IISWebAppManagementOnMachineGroup@0
+  inputs:
+    EnableIIS: true
+    IISDeploymentType: 'IISWebApplication'
+    WebsitePhysicalPath: '%SystemDrive%\inetpub\wwwroot'
+    WebsitePhysicalPathAuth: 'WebsiteUserPassThrough'
+    DotNetVersionForWebsite: 'v4.0'
+    PipeLineModeForWebsite: 'Integrated'
+    AppPoolIdentityForWebsite: 'ApplicationPoolIdentity'
+    PhysicalPathForVD: '%SystemDrive%\inetpub\wwwroot'
+    ParentWebsiteNameForApplication: 'http://localhost:8080/'
+    VirtualPathForApplication: 'http://localhost:8080/App04/'
+    PhysicalPathForApplication: '%SystemDrive%\inetpub\wwwroot'
+    DotNetVersionForApplication: 'v4.0'
+    PipeLineModeForApplication: 'Integrated'
+    AppPoolIdentityForApplication: 'ApplicationPoolIdentity'
+    DotNetVersion: 'v4.0'
+    PipeLineMode: 'Integrated'
+    AppPoolIdentity: 'ApplicationPoolIdentity'
 # Build and test ASP.NET projects.
 # Add steps that publish symbols, save build artifacts, deploy, and more:
 # https://docs.microsoft.com/azure/devops/pipelines/apps/aspnet/build-aspnet-4
