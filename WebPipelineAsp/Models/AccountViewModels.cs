@@ -11,7 +11,7 @@ namespace WebPipelineAsp.Models
 
     public class ManageUserViewModel
     {
-        [Required]
+        [Requi
         [DataType(DataType.Password)]
         [Display(Name = "Contraseña actual")]
         public string OldPassword { get; set; }
